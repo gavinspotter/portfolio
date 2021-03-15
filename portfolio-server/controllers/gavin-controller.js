@@ -89,6 +89,14 @@ const login = async (req, res, next) => {
         return next(error)
     }
 
+    if (!isValidPassword) {
+        const error = new HttpError(
+            "invalid password",
+            403
+        )
+        return next(error)
+    }
+
 
 }
 
