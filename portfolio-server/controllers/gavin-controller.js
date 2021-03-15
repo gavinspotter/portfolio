@@ -7,6 +7,7 @@ const signup = async (req, res, next) => {
 
     const { username, password } = req.body
 
+    let accountExists
 
 }
 
