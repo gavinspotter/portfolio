@@ -113,6 +113,12 @@ const login = async (req, res, next) => {
         return next(error)
     }
 
+    res.json({
+        userId: existingAccount.id,
+        username: existingAccount.username,
+        token: token
+    })
+
 
 }
 
