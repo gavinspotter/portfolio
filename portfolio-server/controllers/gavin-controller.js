@@ -61,10 +61,16 @@ const signup = async (req, res, next) => {
 }
 
 const login = async (req, res, next) => {
-    const { email, password } = req.body
+    const { username, password } = req.body
 
     let existingAccount
 
+    try {
+        existingAccount = await Gavin.findOne({ username: username })
+    } catch (err) {
+        const error = new HttpError("couldnt find username sorry", 500)
+        return next(error)
+    }
 
 
 }
