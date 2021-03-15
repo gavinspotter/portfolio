@@ -7,4 +7,7 @@ const Gavin = require("../models/Gavin")
 
 const submitAQuestion = async (req, res, next) => {
 
-} 
+}
+
+
+exports.submitAQuestion = submitAQuestion
