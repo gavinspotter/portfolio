@@ -26,7 +26,7 @@ const signup = async (req, res, next) => {
     let hashedPassword
 
     try {
-        hashedPassword = await bcrypt.hash(password, 32)
+        hashedPassword = await bcrypt.hash(password, 12)
     } catch (err) {
         const error = new HttpError("couldnt create password", 500)
         return next(error)
