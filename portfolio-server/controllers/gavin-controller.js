@@ -32,6 +32,10 @@ const signup = async (req, res, next) => {
         return next(error)
     }
 
+    const createdAccount = new Gavin({
+        username,
+        password: hashedPassword
+    })
 
 }
 
