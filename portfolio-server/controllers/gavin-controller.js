@@ -45,6 +45,16 @@ const signup = async (req, res, next) => {
     }
 
     let token
+    try {
+        token = jwt.sign(
+            { userId: createdAccount.id, username: createdAccount.username },
+            "dont_share_this",
+            { expiresIn: '1h' }
+        )
+    } catch (err) {
+        const error = new HttpError("creating token failed", 500)
+        return next(error)
+    }
 
 }
 
