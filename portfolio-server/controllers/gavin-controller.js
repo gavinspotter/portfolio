@@ -56,6 +56,8 @@ const signup = async (req, res, next) => {
         return next(error)
     }
 
+    res.status(201).json({ userId: createdAccount.id, username: createdAccount.username, token: token })
+
 }
 
 const login = async (req, res, next) => { }
