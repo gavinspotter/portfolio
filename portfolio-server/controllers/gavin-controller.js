@@ -2,6 +2,8 @@ const HttpError = require("../models/HttpError")
 const Gavin = require("../models/Gavin")
 
 
+const bcrypt = require("bcryptjs")
+const jwt = require("jsonwebtoken")
 
 const signup = async (req, res, next) => {
 
