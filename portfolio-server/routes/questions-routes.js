@@ -4,3 +4,6 @@ const questionController = require("../controllers/question-controller")
 
 
 const router = express.Router()
+
+
+module.exports = router
