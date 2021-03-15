@@ -37,6 +37,13 @@ const signup = async (req, res, next) => {
         password: hashedPassword
     })
 
+    try {
+        await createdAccount.save()
+    } catch (err) {
+        const error = new HttpError("couldnt save user to database", 500)
+        return next(error)
+    }
+
 }
 
 const login = async (req, res, next) => { }
