@@ -97,6 +97,8 @@ const login = async (req, res, next) => {
         return next(error)
     }
 
+    let token
+
 
 }
 
