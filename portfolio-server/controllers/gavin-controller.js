@@ -16,6 +16,11 @@ const signup = async (req, res, next) => {
         return next(error)
     }
 
+    if (accountExists) {
+        const error = new HttpError("user exists", 422)
+        return next(error)
+    }
+
 }
 
 const login = async (req, res, next) => { }
