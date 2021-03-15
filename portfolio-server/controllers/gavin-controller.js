@@ -21,6 +21,8 @@ const signup = async (req, res, next) => {
         return next(error)
     }
 
+    let hashedPassword
+
 }
 
 const login = async (req, res, next) => { }
