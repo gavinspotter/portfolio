@@ -44,6 +44,8 @@ const signup = async (req, res, next) => {
         return next(error)
     }
 
+    let token
+
 }
 
 const login = async (req, res, next) => { }
