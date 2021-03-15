@@ -72,6 +72,14 @@ const login = async (req, res, next) => {
         return next(error)
     }
 
+    if (!existingAccount) {
+        const error = new HttpError(
+            "this isnt a user",
+            401
+        )
+        return next(error)
+    }
+
 
 }
 
