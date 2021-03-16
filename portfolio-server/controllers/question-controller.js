@@ -76,41 +76,7 @@ const getQuestions = async (req, res, next) => {
 
 const repostAQuestion = async (req, res, next) => {
 
-    const { answer, question, userId } = req.body
 
-    let randomQuestion
-
-    try {
-        randomQuestion = await Question.findById(question)
-    } catch (err) {
-        const error = new HttpError("coudlnt find question by id", 500)
-        return next(error)
-    }
-
-    let gavin
-
-    try {
-        gavin = await Gavin.findById(userId)
-    } catch (err) {
-        const error = new HttpError("couldnt find user", 500)
-        return next(error)
-    }
-
-
-    const newRepost = new Gavin.reposts({
-        question,
-        answer
-    })
-
-    try {
-        await Gavin.save()
-    } catch (err) {
-        const error = new HttpError("couldnt save to database", 500)
-        return next(error)
-    }
-
-
-    res.status(201).json({ newRepost })
 
 
 
