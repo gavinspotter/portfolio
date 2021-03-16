@@ -76,6 +76,7 @@ const getQuestions = async (req, res, next) => {
 
 const repostAQuestion = (req, res, next) => {
 
+    const { answer } = req.body
 
 
 }
