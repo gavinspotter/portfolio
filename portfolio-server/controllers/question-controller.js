@@ -8,6 +8,11 @@ const Gavin = require("../models/Gavin")
 const submitAQuestion = async (req, res, next) => {
 
     const { question } = req.body
+
+    let gavin
+
+
+
 }
 
 
