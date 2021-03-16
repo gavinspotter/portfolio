@@ -8,7 +8,7 @@ const router = express.Router()
 
 const checkAuth = require('../middleware/check-auth');
 
-
+router.use(checkAuth)
 
 router.post("/submitquestion", questionController.submitAQuestion)
 
