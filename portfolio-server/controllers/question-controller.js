@@ -18,6 +18,11 @@ const submitAQuestion = async (req, res, next) => {
         return next(error)
     }
 
+    if (!gavin) {
+        const error = new HttpError("couldnt find gavin", 404)
+        return next(error)
+    }
+
 }
 
 
