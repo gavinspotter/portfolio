@@ -6,7 +6,11 @@ const Schema = mongoose.Schema
 const gavinSchema = new Schema({
     username: { type: String, required: true },
     password: { type: String, required: true },
-    questions: [{ type: mongoose.Types.ObjectId, required: true, ref: "Question" }]
+    questions: [{ type: mongoose.Types.ObjectId, required: true, ref: "Question" }],
+    reposts: [{
+        question: { type: mongoose.Types.ObjectId, required: true, ref: "Question" },
+        answer: { type: String, required: true }
+    }]
 })
 
 module.exports = mongoose.model("Gavin", gavinSchema)
