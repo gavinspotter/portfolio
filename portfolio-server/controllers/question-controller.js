@@ -11,7 +11,12 @@ const submitAQuestion = async (req, res, next) => {
 
     let gavin
 
-
+    try {
+        gavin = await Gavin.findById(req.userData.userId)
+    } catch (err) {
+        const error = new HttpError("couldnt find your id", 500)
+        return next(error)
+    }
 
 }
 
