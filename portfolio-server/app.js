@@ -4,6 +4,8 @@ const mongoose = require("mongoose")
 
 const gavinRoutes = require("./routes/gavin-routes")
 
+const questionRoutes = require("./controllers/question-controller")
+
 
 const app = express()
 
@@ -14,6 +16,8 @@ app.use(bodyParser.json())
 
 
 app.use("/api/gavin", gavinRoutes)
+
+
 
 
 app.use((req, res, next) => {
