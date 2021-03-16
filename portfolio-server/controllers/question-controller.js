@@ -83,7 +83,7 @@ const repostAQuestion = async (req, res, next) => {
     try {
         randomQuestion = await Question.findById(question)
     } catch (err) {
-        const error = HttpError("coudlnt find question by id", 500)
+        const error = new HttpError("coudlnt find question by id", 500)
         return next(error)
     }
 
@@ -91,6 +91,14 @@ const repostAQuestion = async (req, res, next) => {
         question,
         answer
     })
+
+    try {
+        await Gavin.save()
+    } catch (err) {
+        const error = new HttpError("couldnt save to database", 500)
+    }
+
+
 
 
 
