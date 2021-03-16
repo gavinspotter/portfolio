@@ -14,5 +14,7 @@ router.post("/submitquestion", questionController.submitAQuestion)
 
 router.get("/getquestions/:uid", questionController.getQuestions)
 
+router.post("/repostaquestion", questionController.repostAQuestion)
+
 
 module.exports = router
