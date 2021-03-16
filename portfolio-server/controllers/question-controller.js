@@ -49,6 +49,7 @@ const submitAQuestion = async (req, res, next) => {
         return next(error)
     }
 
+    res.status(201).json({ question: newQuestion })
 
 }
 
