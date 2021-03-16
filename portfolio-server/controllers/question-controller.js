@@ -57,6 +57,7 @@ const getQuestions = (req, res, next) => {
 
     const userId = req.params.uid
 
+    let questions
 
 }
 
