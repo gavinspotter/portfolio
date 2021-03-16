@@ -87,6 +87,14 @@ const repostAQuestion = async (req, res, next) => {
         return next(error)
     }
 
+    const newRepost = new Gavin.reposts({
+        question,
+        answer
+    })
+
+
+
+
 
 }
 
