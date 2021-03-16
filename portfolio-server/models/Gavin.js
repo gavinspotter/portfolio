@@ -7,10 +7,7 @@ const gavinSchema = new Schema({
     username: { type: String, required: true },
     password: { type: String, required: true },
     questions: [{ type: mongoose.Types.ObjectId, required: true, ref: "Question" }],
-    reposts: [{
-        question: { type: mongoose.Types.ObjectId, required: true, ref: "Question" },
-        answer: { type: String, required: true }
-    }]
+    reposts: [{ type: mongoose.Types.ObjectId, required: true, ref: "Repost" }]
 })
 
 module.exports = mongoose.model("Gavin", gavinSchema)
