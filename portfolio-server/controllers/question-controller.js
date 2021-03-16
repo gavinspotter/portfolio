@@ -74,11 +74,18 @@ const getQuestions = async (req, res, next) => {
 
 }
 
-const repostAQuestion = (req, res, next) => {
+const repostAQuestion = async (req, res, next) => {
 
     const { answer, question } = req.body
 
     let randomQuestion
+
+    try {
+        randomQuestion = await Question.findById(question)
+    } catch (err) {
+        const error = HttpError("coudlnt find question by id", 500)
+        return next(error)
+    }
 
 
 }
