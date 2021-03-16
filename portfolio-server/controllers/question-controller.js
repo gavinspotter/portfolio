@@ -53,11 +53,18 @@ const submitAQuestion = async (req, res, next) => {
 
 }
 
-const getQuestions = (req, res, next) => {
+const getQuestions = async (req, res, next) => {
 
     const userId = req.params.uid
 
     let questions
+
+    try {
+        questions = await Question.find({ gavin: userId })
+    } catch (err) {
+        const error = new HttpError("couldnt find user", 500)
+        return next(error)
+    }
 
 }
 
