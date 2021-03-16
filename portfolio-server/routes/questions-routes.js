@@ -12,7 +12,7 @@ router.use(checkAuth)
 
 router.post("/submitquestion", questionController.submitAQuestion)
 
-
+router.get("/getquestions", questionController.getQuestions)
 
 
 module.exports = router
