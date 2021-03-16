@@ -66,6 +66,12 @@ const getQuestions = async (req, res, next) => {
         return next(error)
     }
 
+    if (!questions || questions.length === 0) {
+        return next(new HttpError("couldnt find any questions"))
+    }
+
+    res.json({ questions })
+
 }
 
 exports.getQuestions = getQuestions
