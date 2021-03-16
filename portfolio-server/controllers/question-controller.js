@@ -35,7 +35,12 @@ const submitAQuestion = async (req, res, next) => {
         return next(error)
     }
 
-
+    try {
+        gavin.questions.push(newQuestion)
+    } catch (err) {
+        const error = new HttpError("couldnt add question to array", 500)
+        return next(error)
+    }
 
 
 }
