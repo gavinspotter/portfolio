@@ -78,5 +78,6 @@ const repostAQuestion = (req, res, next) => {
 
 }
 
+exports.repostAQuestion = repostAQuestion
 exports.getQuestions = getQuestions
 exports.submitAQuestion = submitAQuestion
