@@ -53,5 +53,9 @@ const submitAQuestion = async (req, res, next) => {
 
 }
 
+const getQuestions = (req, res, next) => {
+
+}
+
 
 exports.submitAQuestion = submitAQuestion

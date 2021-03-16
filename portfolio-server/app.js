@@ -9,11 +9,7 @@ const questionRoutes = require("./routes/questions-routes")
 
 const app = express()
 
-
 app.use(bodyParser.json())
-
-
-
 
 app.use("/api/gavin", gavinRoutes)
 
