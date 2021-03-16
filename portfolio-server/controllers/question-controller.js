@@ -57,5 +57,5 @@ const getQuestions = (req, res, next) => {
 
 }
 
-
+exports.getQuestions = getQuestions
 exports.submitAQuestion = submitAQuestion
