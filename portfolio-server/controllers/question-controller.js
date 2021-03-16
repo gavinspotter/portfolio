@@ -4,6 +4,8 @@ const Question = require("../models/AnonymousQuestion")
 
 const Gavin = require("../models/Gavin")
 
+const Repost = require("../models/Reposts")
+
 
 const submitAQuestion = async (req, res, next) => {
 
