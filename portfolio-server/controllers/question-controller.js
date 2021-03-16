@@ -9,6 +9,11 @@ const submitAQuestion = async (req, res, next) => {
 
     const { question } = req.body
 
+    const newQuestion = new Question({
+        question,
+        gavin: req.userData.userId
+    })
+
     let gavin
 
     try {
