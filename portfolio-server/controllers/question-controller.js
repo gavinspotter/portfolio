@@ -42,6 +42,13 @@ const submitAQuestion = async (req, res, next) => {
         return next(error)
     }
 
+    try {
+        await gavin.save()
+    } catch (err) {
+        const error = new HttpError("couldnt save gavin data", 500)
+        return next(error)
+    }
+
 
 }
 
