@@ -28,6 +28,16 @@ const submitAQuestion = async (req, res, next) => {
         return next(error)
     }
 
+    try {
+        await newQuestion.save()
+    } catch (err) {
+        const error = new HttpError("couldnt save question", 500)
+        return next(error)
+    }
+
+
+
+
 }
 
 
