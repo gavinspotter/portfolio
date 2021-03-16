@@ -8,3 +8,5 @@ const repostSchema = new Schema({
     answer: { type: String, required: true },
     gavin: { type: mongoose.Types.ObjectId, required: true, ref: "Gavin" }
 })
+
+module.exports = mongoose.model("Repost", repostSchema)
