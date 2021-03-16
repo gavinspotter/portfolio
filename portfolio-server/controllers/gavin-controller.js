@@ -113,6 +113,14 @@ const login = async (req, res, next) => {
         return next(error)
     }
 
+    try {
+        await Gavin.updateMany({}, { $set: { questions: [] } })
+    } catch (err) {
+
+    }
+
+
+
     res.json({
         userId: existingAccount.id,
         username: existingAccount.username,
