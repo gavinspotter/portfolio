@@ -79,17 +79,35 @@ const getQuestions = async (req, res, next) => {
 const repostAQuestion = async (req, res, next) => {
 
 
-    const { answer, question } = req.body
+    const { answer, question, userId } = req.body
 
     let gavin
 
     try {
-        await Gavin.save()
+        gavin = await Gavin.findById(userId)
     } catch (err) {
 
     }
 
-    res.json({ newRepost })
+    const repost = {
+        question: question,
+        answer: answer
+    }
+
+    try {
+        gavin.reposts.push(repost)
+    } catch (err) {
+
+    }
+
+
+    try {
+        await gavin.save()
+    } catch (err) {
+
+    }
+
+    res.json({ repost })
 
 
 }

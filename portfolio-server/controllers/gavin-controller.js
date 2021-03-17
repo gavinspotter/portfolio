@@ -113,17 +113,7 @@ const login = async (req, res, next) => {
         return next(error)
     }
 
-    try {
-        await Gavin.updateMany({}, { $set: { questions: [] } })
-    } catch (err) {
 
-    }
-
-    try {
-        await Gavin.updateMany({}, { $set: { reposts: [] } })
-    } catch (err) {
-
-    }
 
 
 
