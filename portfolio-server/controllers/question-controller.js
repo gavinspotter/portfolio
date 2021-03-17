@@ -98,7 +98,8 @@ const repostAQuestion = async (req, res, next) => {
     try {
         gavin.reposts.push(repost)
     } catch (err) {
-
+        const error = new HttpError("couldnt add to database", 500)
+        return next(error)
     }
 
 
