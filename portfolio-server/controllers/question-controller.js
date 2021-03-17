@@ -106,7 +106,8 @@ const repostAQuestion = async (req, res, next) => {
     try {
         await gavin.save()
     } catch (err) {
-
+        const error = new HttpError("couldnt save to database", 500)
+        return next(error)
     }
 
     res.json({ repost })
