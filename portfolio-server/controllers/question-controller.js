@@ -81,6 +81,10 @@ const repostAQuestion = async (req, res, next) => {
 
     const { answer, question } = req.body
 
+    const newRepost = new Gavin.reposts({
+        answer,
+        question
+    })
 
 
 
