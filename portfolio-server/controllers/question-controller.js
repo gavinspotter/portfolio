@@ -86,7 +86,8 @@ const repostAQuestion = async (req, res, next) => {
     try {
         gavin = await Gavin.findById(req.userData.userId)
     } catch (err) {
-
+        const error = new HttpError("couldnt verify token", 500)
+        return next(error)
     }
 
     const repost = {
