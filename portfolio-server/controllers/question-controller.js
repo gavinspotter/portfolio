@@ -84,7 +84,7 @@ const repostAQuestion = async (req, res, next) => {
     let gavin
 
     try {
-        gavin = await Gavin.findById(userId)
+        gavin = await Gavin.findById(req.userData.userId)
     } catch (err) {
 
     }
