@@ -117,7 +117,9 @@ const repostAQuestion = async (req, res, next) => {
 
 const getRepost = async (req, res, next) => {
 
-    const questionId = req.params.questionId
+    const questionId = req.params.questionid
+
+    const repostId = req.params.repostid
 
 }
 
