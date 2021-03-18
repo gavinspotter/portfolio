@@ -152,7 +152,7 @@ const getRepost = async (req, res, next) => {
         return next(error)
     }
 
-
+    res.json({ repost: repost.answer, question: question.question })
 
 
 
