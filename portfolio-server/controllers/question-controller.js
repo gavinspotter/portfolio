@@ -117,6 +117,8 @@ const repostAQuestion = async (req, res, next) => {
 
 const getRepost = async (req, res, next) => {
 
+    const questionId = req.params.questionId
+
 }
 
 exports.getRepost = getRepost
