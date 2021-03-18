@@ -8,7 +8,7 @@ const router = express.Router()
 
 const checkAuth = require('../middleware/check-auth');
 
-router.get("/:repostid/:questionid", questionController.getRepost)
+router.get("/:gavinid/:repostid", questionController.getRepost)
 
 router.use(checkAuth)
 
