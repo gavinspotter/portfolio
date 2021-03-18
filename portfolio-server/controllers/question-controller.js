@@ -79,7 +79,7 @@ const getQuestions = async (req, res, next) => {
 const repostAQuestion = async (req, res, next) => {
 
 
-    const { answer, question, userId } = req.body
+    const { answer, question } = req.body
 
     let gavin
 
@@ -114,6 +114,8 @@ const repostAQuestion = async (req, res, next) => {
 
 
 }
+
+const getRepost = async (req, res, next) => { }
 
 exports.repostAQuestion = repostAQuestion
 exports.getQuestions = getQuestions
