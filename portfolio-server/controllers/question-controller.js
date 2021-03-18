@@ -136,6 +136,13 @@ const getRepost = async (req, res, next) => {
 
     let repost
 
+    try {
+        repost = Gavin({ repost: { _id: repostId } })
+    } catch (err) {
+        const error = new HttpError("couldnt find repost by id", 500)
+        return next(error)
+    }
+
 
 }
 
