@@ -115,8 +115,11 @@ const repostAQuestion = async (req, res, next) => {
 
 }
 
-const getRepost = async (req, res, next) => { }
+const getRepost = async (req, res, next) => {
 
+}
+
+exports.getRepost = getRepost
 exports.repostAQuestion = repostAQuestion
 exports.getQuestions = getQuestions
 exports.submitAQuestion = submitAQuestion

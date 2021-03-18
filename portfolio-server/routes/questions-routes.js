@@ -8,6 +8,8 @@ const router = express.Router()
 
 const checkAuth = require('../middleware/check-auth');
 
+
+
 router.use(checkAuth)
 
 router.post("/submitquestion", questionController.submitAQuestion)
@@ -15,6 +17,8 @@ router.post("/submitquestion", questionController.submitAQuestion)
 router.get("/getquestions/:uid", questionController.getQuestions)
 
 router.post("/repostaquestion", questionController.repostAQuestion)
+
+
 
 
 module.exports = router
