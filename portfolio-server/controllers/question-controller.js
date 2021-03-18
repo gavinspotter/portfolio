@@ -148,7 +148,8 @@ const getRepost = async (req, res, next) => {
     try {
         question = Question.findById(repost.repost.question)
     } catch (err) {
-
+        const error = new HttpError("couldnt find question by id", 500)
+        return next(error)
     }
 
 
