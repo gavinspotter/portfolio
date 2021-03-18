@@ -130,6 +130,11 @@ const getRepost = async (req, res, next) => {
         return next(error)
     }
 
+    if (!questions || questions.length === 0) {
+        return next(new HttpError("couldnt find any questions"))
+    }
+
+
 }
 
 exports.getRepost = getRepost
