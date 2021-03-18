@@ -121,27 +121,39 @@ const getRepost = async (req, res, next) => {
 
     const repostId = req.params.repostid
 
-    let question
+    // let question
 
-    try {
-        question = Question.findById(questionId)
-    } catch (err) {
-        const error = new HttpError("couldnt find question by id", 500)
-        return next(error)
-    }
+    // try {
+    //     question = Question.findById(questionId)
+    // } catch (err) {
+    //     const error = new HttpError("couldnt find question by id", 500)
+    //     return next(error)
+    // }
 
-    if (!questions || questions.length === 0) {
-        return next(new HttpError("couldnt find any questions"))
-    }
+    // if (!questions || questions.length === 0) {
+    //     return next(new HttpError("couldnt find any questions"))
+    // }
 
     let repost
 
     try {
-        repost = Gavin({ repost: { _id: repostId } })
+        repost = Gavin.find({ repost: { _id: repostId } })
     } catch (err) {
         const error = new HttpError("couldnt find repost by id", 500)
         return next(error)
     }
+
+    let question
+
+    try {
+        question = Question.findById(repost.repost.question)
+    } catch (err) {
+
+    }
+
+
+
+
 
 
 }
