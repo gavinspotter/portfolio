@@ -121,6 +121,8 @@ const getRepost = async (req, res, next) => {
 
     const repostId = req.params.repostid
 
+    let question
+
 }
 
 exports.getRepost = getRepost
