@@ -123,6 +123,13 @@ const getRepost = async (req, res, next) => {
 
     let question
 
+    try {
+        question = Question.findById(questionId)
+    } catch (err) {
+        const error = new HttpError("couldnt find question by id", 500)
+        return next(error)
+    }
+
 }
 
 exports.getRepost = getRepost
