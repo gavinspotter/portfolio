@@ -117,24 +117,9 @@ const repostAQuestion = async (req, res, next) => {
 
 const getRepost = async (req, res, next) => {
 
-    const questionId = req.params.questionid
-
-    const repostId = req.params.repostid
 
     const gavinId = req.params.gavinid
 
-    // let question
-
-    // try {
-    //     question = Question.findById(questionId)
-    // } catch (err) {
-    //     const error = new HttpError("couldnt find question by id", 500)
-    //     return next(error)
-    // }
-
-    // if (!questions || questions.length === 0) {
-    //     return next(new HttpError("couldnt find any questions"))
-    // }
 
     let gavin
 
@@ -145,22 +130,7 @@ const getRepost = async (req, res, next) => {
         return next(error)
     }
 
-    // let repost
 
-    // try {
-    //     await gavin.reposts.find({ _id: repostId })
-    // } catch (err) {
-    //     console.log(err)
-    // }
-
-    // let question
-
-    // try {
-    //     question = Question.findById(repost.reposts.question)
-    // } catch (err) {
-    //     const error = new HttpError("couldnt find question by id", 500)
-    //     return next(error)
-    // }
 
     res.json({ gavin: gavin.reposts })
 
