@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom"
+import Signin from './gavin/pages/Signin';
 
 
 import { AuthContext } from "./shared/context/auth-context"
@@ -11,11 +12,39 @@ const App = () => {
 
   let routes
 
+  if (token) {
+    routes = (
+      <Switch>
+        <Route>
+
+        </Route>
+      </Switch>
+    )
+
+  } else {
+    routes = (
+      <Switch>
+        <Route path="/login" exact>
+          <Signin />
+        </Route>
+      </Switch>
+    )
+  }
+
 
   return (
-    <div>
+    <AuthContext.Provider
+      value={{ isLoggedIn: !!token, token: token, userId: userId, login: login, logout: logout }}
+    >
 
-    </div>
+      <Router>
+
+        {routes}
+
+      </Router>
+
+
+    </AuthContext.Provider>
   )
 }
 
