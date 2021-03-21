@@ -14,6 +14,25 @@ const Signin = () => {
 
     const { register, handleSubmit } = useForm()
 
+    const onSubmit = async (data) => {
+
+        try {
+            const responseData = await sendRequest(
+                "http:localhost:5000/api/gavin/login",
+                "POST",
+                JSON.stringify({
+                    name: data.name,
+                    password: data.password
+                }),
+                {
+                    "Content-Type": "application/json"
+                }
+            )
+            auth.login(responseData.userId, responseData.token)
+        } catch (err) {
+
+        }
+    }
 
     return (
         <div>
