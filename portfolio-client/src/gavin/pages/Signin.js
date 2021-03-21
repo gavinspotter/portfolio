@@ -10,6 +10,11 @@ const Signin = () => {
     const auth = useContext(AuthContext)
 
 
+    const { isLoading, error, sendRequest, clearError } = useHttpClient()
+
+    const { register, handleSubmit } = useForm()
+
+
     return (
         <div>
 
