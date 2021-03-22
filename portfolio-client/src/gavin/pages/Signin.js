@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { useForm } from 'react-hook-form'
+import Input from '../../shared/components/FormElements/Input'
 import ErrorModal from '../../shared/components/UIElements/ErrorModal'
 import LoadingSpinner from '../../shared/components/UIElements/LoadingSpinner'
 
@@ -42,6 +43,12 @@ const Signin = () => {
             <div className="login__card">
                 {isLoading && <LoadingSpinner asOverlay />}
                 <h2> Gavin please login </h2>
+                <Input
+                    name="login"
+                    valRef={register}
+                    label="email"
+                    element="input"
+                />
 
             </div>
         </React.Fragment>
