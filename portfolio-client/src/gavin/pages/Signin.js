@@ -46,8 +46,15 @@ const Signin = () => {
                 <Input
                     name="login"
                     valRef={register}
-                    label="email"
+                    label="username"
                     element="input"
+                />
+                <Input
+                    name="password"
+                    valRef={register}
+                    label="password"
+                    element="input"
+                    type="password"
                 />
 
             </div>
