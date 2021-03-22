@@ -39,7 +39,9 @@ const Signin = () => {
     return (
         <React.Fragment>
             <ErrorModal error={error} onClear={clearError} />
-            {isLoading && <LoadingSpinner asOverlay />}
+            <div className="login__card">
+                {isLoading && <LoadingSpinner asOverlay />}
+            </div>
         </React.Fragment>
     )
 }
