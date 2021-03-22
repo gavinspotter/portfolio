@@ -43,19 +43,21 @@ const Signin = () => {
             <div className="login__card">
                 {isLoading && <LoadingSpinner asOverlay />}
                 <h2> Gavin please login </h2>
-                <Input
-                    name="login"
-                    valRef={register}
-                    label="username"
-                    element="input"
-                />
-                <Input
-                    name="password"
-                    valRef={register}
-                    label="password"
-                    element="input"
-                    type="password"
-                />
+                <form>
+                    <Input
+                        name="login"
+                        valRef={register}
+                        label="username"
+                        element="input"
+                    />
+                    <Input
+                        name="password"
+                        valRef={register}
+                        label="password"
+                        element="input"
+                        type="password"
+                    />
+                </form>
 
             </div>
         </React.Fragment>
