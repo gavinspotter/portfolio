@@ -2,9 +2,12 @@ import React from 'react'
 
 import "../css/style.css"
 
-const Background = () => {
+const Background = (props) => {
     return (
-        <div>
+        <div className="background__cover">
+            <div className="background__slide">
+                {props.children}
+            </div>
 
         </div>
     )
