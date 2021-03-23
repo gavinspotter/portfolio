@@ -21,7 +21,7 @@ const Signin = () => {
 
         try {
             const responseData = await sendRequest(
-                "http:localhost:5000/api/gavin/login",
+                "http://localhost:5000/api/gavin/login",
                 "POST",
                 JSON.stringify({
                     name: data.name,
@@ -58,8 +58,9 @@ const Signin = () => {
                             element="input"
                             type="password"
                         />
+                        <button> login </button>
                     </form>
-                    <button> login </button>
+
                 </div>
             </div>
         </React.Fragment>
