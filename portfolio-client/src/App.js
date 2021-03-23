@@ -1,10 +1,11 @@
 import React from 'react'
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom"
 import Signin from './gavin/pages/Signin';
+import Background from './shared/Background';
 
 
 import { AuthContext } from "./shared/context/auth-context"
-import Home from './shared/Home';
+
 import { useAuth } from './shared/hooks/auth-hook';
 
 const App = () => {
@@ -39,9 +40,9 @@ const App = () => {
     >
 
       <Router>
-        <Home>
+        <Background>
           {routes}
-        </Home>
+        </Background>
       </Router>
 
 
