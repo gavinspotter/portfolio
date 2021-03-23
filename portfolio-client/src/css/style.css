@@ -16,6 +16,13 @@ body {
   color: #777;
   text-transform: uppercase; }
 
+.login__card {
+  background: #fff;
+  height: 30rem;
+  width: 30rem;
+  margin-top: 10rem;
+  margin-left: 30rem; }
+
 .lds-dual-ring {
   display: inline-block;
   width: 64px;
