@@ -4,6 +4,7 @@ import Signin from './gavin/pages/Signin';
 
 
 import { AuthContext } from "./shared/context/auth-context"
+import Home from './shared/Home';
 import { useAuth } from './shared/hooks/auth-hook';
 
 const App = () => {
@@ -38,9 +39,9 @@ const App = () => {
     >
 
       <Router>
-
-        {routes}
-
+        <Home>
+          {routes}
+        </Home>
       </Router>
 
 
