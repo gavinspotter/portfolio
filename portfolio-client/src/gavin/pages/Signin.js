@@ -41,24 +41,25 @@ const Signin = () => {
         <React.Fragment>
             <ErrorModal error={error} onClear={clearError} />
             <div className="login__card">
-                {isLoading && <LoadingSpinner asOverlay />}
-                <h2> Gavin please login </h2>
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <Input
-                        name="login"
-                        valRef={register}
-                        label="username"
-                        element="input"
-                    />
-                    <Input
-                        name="password"
-                        valRef={register}
-                        label="password"
-                        element="input"
-                        type="password"
-                    />
-                </form>
-
+                <div className="login__card--text">
+                    {isLoading && <LoadingSpinner asOverlay />}
+                    <h2> Gavin please login </h2>
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <Input
+                            name="login"
+                            valRef={register}
+                            label="username"
+                            element="input"
+                        />
+                        <Input
+                            name="password"
+                            valRef={register}
+                            label="password"
+                            element="input"
+                            type="password"
+                        />
+                    </form>
+                </div>
             </div>
         </React.Fragment>
     )

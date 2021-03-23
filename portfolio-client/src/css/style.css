@@ -21,7 +21,13 @@ body {
   height: 30rem;
   width: 30rem;
   margin-top: 10rem;
-  margin-left: 30rem; }
+  margin-left: 52rem;
+  display: inline-block;
+  text-align: center;
+  border-radius: 100%; }
+
+.login__card--text {
+  margin-top: 10rem; }
 
 .lds-dual-ring {
   display: inline-block;
