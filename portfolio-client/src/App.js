@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom"
+import Projects from './gavin/pages/Projects';
 import Resume from './gavin/pages/Resume';
 import Signin from './gavin/pages/Signin';
 import Background from './shared/Background';
@@ -21,7 +22,9 @@ const App = () => {
         <Route path="/" exact>
           <Resume />
         </Route>
-
+        <Route path="/projects" exact>
+          <Projects />
+        </Route>
         <Redirect to="/" exact />
       </Switch>
     )
