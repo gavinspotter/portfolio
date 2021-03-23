@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom"
+import Resume from './gavin/pages/Resume';
 import Signin from './gavin/pages/Signin';
 import Background from './shared/Background';
 
@@ -17,9 +18,10 @@ const App = () => {
   if (token) {
     routes = (
       <Switch>
-        <Route>
-
+        <Route path="/" exact>
+          <Resume />
         </Route>
+
         <Redirect to="/" exact />
       </Switch>
     )
