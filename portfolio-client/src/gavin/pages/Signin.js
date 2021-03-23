@@ -24,7 +24,7 @@ const Signin = () => {
                 "http://localhost:5000/api/gavin/login",
                 "POST",
                 JSON.stringify({
-                    name: data.name,
+                    username: data.username,
                     password: data.password
                 }),
                 {
@@ -46,7 +46,7 @@ const Signin = () => {
                     <h2> Gavin please login </h2>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <Input
-                            name="login"
+                            name="username"
                             valRef={register}
                             label="username"
                             element="input"
