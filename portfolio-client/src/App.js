@@ -29,6 +29,7 @@ const App = () => {
         <Route path="/login" exact>
           <Signin />
         </Route>
+        <Redirect to="/" exact />
       </Switch>
     )
   }
