@@ -96,3 +96,9 @@ body {
   transform: translateY(-10rem);
   opacity: 0;
   transition: all 200ms; }
+
+.background__cover {
+  height: 100vh;
+  background-image: url(../img/starynight.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; }
