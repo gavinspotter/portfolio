@@ -43,7 +43,7 @@ const Signin = () => {
             <div className="login__card">
                 {isLoading && <LoadingSpinner asOverlay />}
                 <h2> Gavin please login </h2>
-                <form>
+                <form onSubmit={handleSubmit(onSubmit)}>
                     <Input
                         name="login"
                         valRef={register}
