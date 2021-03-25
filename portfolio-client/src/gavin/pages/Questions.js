@@ -15,14 +15,15 @@ const Questions = () => {
 
             try {
                 const responseData = await sendRequest(
-                    `http:localhost://5000/api/questions/`
+                    `http:localhost://5000/api/questions/${auth.userId}`
                 )
             } catch (err) {
 
             }
 
         }
-    }, [])
+        fetchQuestionAnswers()
+    }, [sendRequest, auth.userId])
 
     return (
         <div>
