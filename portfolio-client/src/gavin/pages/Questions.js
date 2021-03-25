@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react'
 
+
+import { AuthContext } from "../../shared/context/auth-context"
 import { useHttpClient } from "../../shared/hooks/http-hook"
 
 const Questions = () => {
