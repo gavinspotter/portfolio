@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import { useHttpClient } from "../../shared/hooks/http-hook"
 
 const Questions = () => {
 
+    useEffect(() => { }, [])
 
     return (
         <div>
