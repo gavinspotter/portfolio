@@ -11,7 +11,9 @@ const Questions = () => {
         const fetchQuestionAnswers = async () => {
 
             try {
-
+                const responseData = await sendRequest(
+                    `http:localhost://5000/api/questions/`
+                )
             } catch (err) {
 
             }
