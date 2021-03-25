@@ -7,6 +7,12 @@ const Questions = () => {
     useEffect(() => {
         const fetchQuestionAnswers = async () => {
 
+            try {
+
+            } catch (err) {
+
+            }
+
         }
     }, [])
 
