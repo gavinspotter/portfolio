@@ -4,6 +4,9 @@ import { useHttpClient } from "../../shared/hooks/http-hook"
 
 const Questions = () => {
 
+
+    const { isLoading, error, sendRequest, clearError } = useHttpClient()
+
     useEffect(() => {
         const fetchQuestionAnswers = async () => {
 
