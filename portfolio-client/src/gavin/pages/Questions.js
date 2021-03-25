@@ -4,7 +4,11 @@ import { useHttpClient } from "../../shared/hooks/http-hook"
 
 const Questions = () => {
 
-    useEffect(() => { }, [])
+    useEffect(() => {
+        const fetchQuestionAnswers = async () => {
+
+        }
+    }, [])
 
     return (
         <div>
