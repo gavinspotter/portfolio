@@ -28,9 +28,11 @@ const Questions = () => {
     }, [sendRequest, auth.userId])
 
     return (
-        <div>
+        <React.Fragment>
 
-        </div>
+
+        </React.Fragment>
+
     )
 }
 
