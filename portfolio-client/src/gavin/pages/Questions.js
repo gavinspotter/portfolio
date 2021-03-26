@@ -8,6 +8,8 @@ const Questions = () => {
 
     const auth = useContext(AuthContext)
 
+    const [questions, setLoadedQuestions] = useState()
+
     const { isLoading, error, sendRequest, clearError } = useHttpClient()
 
     useEffect(() => {
