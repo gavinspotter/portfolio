@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
+import ErrorModal from '../../shared/components/UIElements/ErrorModal'
 
 
 import { AuthContext } from "../../shared/context/auth-context"
@@ -30,6 +31,7 @@ const Questions = () => {
     return (
         <React.Fragment>
 
+            <ErrorModal error={error} onClear={clearError} />
 
         </React.Fragment>
 
