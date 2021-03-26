@@ -11,7 +11,7 @@ const Questions = () => {
     const { isLoading, error, sendRequest, clearError } = useHttpClient()
 
     useEffect(() => {
-        const fetchQuestionAnswers = async () => {
+        const fetchQuestions = async () => {
 
             try {
                 const responseData = await sendRequest(
@@ -22,7 +22,7 @@ const Questions = () => {
             }
 
         }
-        fetchQuestionAnswers()
+        fetchQuestions()
     }, [sendRequest, auth.userId])
 
     return (
