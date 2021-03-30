@@ -1,6 +1,7 @@
 import React from 'react'
 
 import "../../../css/style.css"
+import Button from '../../../shared/components/FormElements/Button'
 import Input from '../../../shared/components/FormElements/Input'
 
 const QuestionItem = (props) => {
@@ -14,7 +15,7 @@ const QuestionItem = (props) => {
             <div>
                 <form>
                     <Input />
-
+                    <Button> submit </Button>
                 </form>
 
             </div>
