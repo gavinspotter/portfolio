@@ -34,7 +34,9 @@ const signup = async (req, res, next) => {
 
     const createdAccount = new Gavin({
         username,
-        password: hashedPassword
+        password: hashedPassword,
+        questions: [],
+        respots: []
     })
 
     try {

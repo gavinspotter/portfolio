@@ -16,5 +16,7 @@ const gavinSchema = new Schema({
     // reposts: [{ type: mongoose.Types.ObjectId, required: true, ref: "Repost" }]
 })
 
-module.exports = mongoose.model("Gavin", gavinSchema)
-module.exports = mongoose.model("Repost", repostSchema)
+const repostStuff = mongoose.model("Repost", repostSchema)
+const gavinStuff = mongoose.model("Gavin", gavinSchema)
+
+module.exports = repostStuff && gavinStuff
