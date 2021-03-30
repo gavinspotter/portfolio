@@ -5,7 +5,7 @@ import "../../../css/style.css"
 
 const QuestionList = (props) => {
     return (
-        <div>
+        <div >
             {
                 props.love.map((data) =>
                     <QuestionItem

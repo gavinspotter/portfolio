@@ -4,7 +4,7 @@ import "../../../css/style.css"
 
 const QuestionItem = (props) => {
     return (
-        <div>
+        <div className="questions__card">
             {props.question}
         </div>
     )
