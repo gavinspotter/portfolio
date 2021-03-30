@@ -1,4 +1,5 @@
 import React from 'react'
+import { useForm } from 'react-hook-form'
 
 import "../../../css/style.css"
 import Button from '../../../shared/components/FormElements/Button'
@@ -11,6 +12,8 @@ const QuestionItem = (props) => {
 
 
     const { isLoading, error, sendRequest, clearError } = useHttpClient()
+
+    const { register, handleSubmit } = useForm()
 
 
     return (
