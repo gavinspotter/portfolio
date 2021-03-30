@@ -1,4 +1,5 @@
 import React from 'react'
+import QuestionItem from "./QuestionItem"
 
 import "../../../css/style.css"
 
