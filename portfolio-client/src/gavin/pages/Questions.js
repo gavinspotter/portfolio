@@ -5,12 +5,13 @@ import LoadingSpinner from '../../shared/components/UIElements/LoadingSpinner'
 
 import { AuthContext } from "../../shared/context/auth-context"
 import { useHttpClient } from "../../shared/hooks/http-hook"
+import QuestionList from './QuestionsCompents/QuestionList'
 
 const Questions = () => {
 
     const auth = useContext(AuthContext)
 
-    const [questions, setLoadedQuestions] = useState()
+    const [loadedQuestions, setLoadedQuestions] = useState()
 
     const { isLoading, error, sendRequest, clearError } = useHttpClient()
 
@@ -42,7 +43,7 @@ const Questions = () => {
             {isLoading && (<div>
                 <LoadingSpinner />
             </div>)}
-
+            {!isLoading && loadedQuestions && <QuestionList love={loadedQuestions} />}
         </React.Fragment>
 
     )
