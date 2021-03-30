@@ -28,6 +28,8 @@ const Questions = () => {
                     }
 
                 )
+
+                setLoadedQuestions(responseData)
             } catch (err) {
 
             }
