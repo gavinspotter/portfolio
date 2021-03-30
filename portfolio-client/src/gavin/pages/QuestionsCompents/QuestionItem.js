@@ -1,6 +1,6 @@
 import React from 'react'
 
-const QuestionItem = () => {
+const QuestionItem = (props) => {
     return (
         <div>
 
