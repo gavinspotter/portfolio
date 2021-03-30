@@ -8,8 +8,6 @@ const Background = (props) => {
             <div className="background__slide">
                 {props.children}
             </div>
-
-
         </div>
     )
 }

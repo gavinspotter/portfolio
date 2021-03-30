@@ -37,6 +37,8 @@ body {
   text-align: center;
   margin-top: 3rem;
   margin-Left: 52rem; }
+  .questions__card--text {
+    margin-top: 3rem; }
 
 .lds-dual-ring {
   display: inline-block;
