@@ -18,7 +18,8 @@ const Questions = () => {
 
             try {
                 const responseData = await sendRequest(
-                    `http://localhost:5000/api/questions/${auth.userId}`
+                    `http://localhost:5000/api/questions/getquestions/${auth.userId}`
+
                 )
             } catch (err) {
 
