@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import ErrorModal from '../../shared/components/UIElements/ErrorModal'
+import LoadingSpinner from '../../shared/components/UIElements/LoadingSpinner'
 
 
 import { AuthContext } from "../../shared/context/auth-context"
@@ -38,6 +39,9 @@ const Questions = () => {
         <React.Fragment>
 
             <ErrorModal error={error} onClear={clearError} />
+            {isLoading && (<div>
+                <LoadingSpinner />
+            </div>)}
 
         </React.Fragment>
 
