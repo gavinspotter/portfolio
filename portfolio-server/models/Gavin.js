@@ -17,3 +17,4 @@ const gavinSchema = new Schema({
 })
 
 module.exports = mongoose.model("Gavin", gavinSchema)
+module.exports = mongoose.model("Repost", repostSchema)
