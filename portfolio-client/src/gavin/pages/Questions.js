@@ -36,7 +36,7 @@ const Questions = () => {
 
         }
         fetchQuestions()
-    }, [sendRequest, auth.userId])
+    }, [sendRequest, auth.userId, auth.token])
 
     return (
         <React.Fragment>
