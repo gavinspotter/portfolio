@@ -29,7 +29,7 @@ const Questions = () => {
 
                 )
 
-                setLoadedQuestions(responseData)
+                setLoadedQuestions(responseData.questions)
             } catch (err) {
 
             }

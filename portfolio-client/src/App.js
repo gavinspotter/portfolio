@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom"
 import Projects from './gavin/pages/Projects';
+import Questions from './gavin/pages/Questions';
 import Resume from './gavin/pages/Resume';
 import Signin from './gavin/pages/Signin';
 import Background from './shared/Background';
@@ -19,13 +20,10 @@ const App = () => {
   if (token) {
     routes = (
       <Switch>
-        <Route path="/" exact>
-          <Resume />
+        <Route path="/">
+          <Questions />
         </Route>
-        <Route path="/projects" exact>
-          <Projects />
-        </Route>
-        <Redirect to="/" exact />
+
       </Switch>
     )
 
