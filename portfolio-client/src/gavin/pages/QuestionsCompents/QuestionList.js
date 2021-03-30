@@ -12,7 +12,7 @@ const QuestionList = (props) => {
                         key={data._id}
                         _id={data._id}
                         question={data.question}
-                    />)
+                    />).reverse()
             }
         </div>
     )
