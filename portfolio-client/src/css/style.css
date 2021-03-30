@@ -29,6 +29,15 @@ body {
 .login__card--text {
   margin-top: 10rem; }
 
+.questions__card {
+  background-color: #fff;
+  height: 30rem;
+  width: 30rem;
+  display: inline-block;
+  text-align: center;
+  margin-top: 3rem;
+  margin-Left: 52rem; }
+
 .lds-dual-ring {
   display: inline-block;
   width: 64px;
