@@ -128,6 +128,14 @@ const repostAQuestion = async (req, res, next) => {
         return next(error)
     }
 
+    try {
+        post.repost.push(repost._id)
+    } catch (err) {
+        const error = new HttpError("couldnt add repost id", 500)
+        return next(error)
+    }
+
+
 
 
     res.json({ repost })
