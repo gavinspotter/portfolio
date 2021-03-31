@@ -13,7 +13,7 @@ const submitAQuestion = async (req, res, next) => {
     const newQuestion = new Question({
         question,
         gavin: req.userData.userId,
-        repost: null
+
     })
 
     /*
@@ -119,17 +119,21 @@ const repostAQuestion = async (req, res, next) => {
 
     }
 
-    let post
+
+    //const sup = gavin.reposts.filter((x) => x.question == "6064ce147441fdb928e4e823")
+
+    // let post
+
+    // try {
+    //     post = await gavin.find(reposts)
+    // } catch (err) {
+    //     const error = new HttpError("couldnt find question", 500)
+    //     return next(error)
+    // }
 
     try {
-        post = await Question.findById(question)
-    } catch (err) {
-        const error = new HttpError("couldnt find question", 500)
-        return next(error)
-    }
+        await Question.updateOne({ _id: question }, { $set: { repost: gavin.reposts.find((x) => x.question == "6064ce147441fdb928e4e823") } })
 
-    try {
-        post.repost.push(repost._id)
     } catch (err) {
         const error = new HttpError("couldnt add repost id", 500)
         return next(error)
@@ -138,7 +142,7 @@ const repostAQuestion = async (req, res, next) => {
 
 
 
-    res.json({ repost })
+    res.json({ gavin })
 
 
 
