@@ -15,6 +15,14 @@ const submitAQuestion = async (req, res, next) => {
         gavin: req.userData.userId
     })
 
+    /*
+    try {
+        await Gavin.updateMany({}, { $set: { reposts: [] } })
+    } catch (err) {
+
+    } 
+    */
+
     let gavin
 
     try {
