@@ -12,7 +12,8 @@ const submitAQuestion = async (req, res, next) => {
 
     const newQuestion = new Question({
         question,
-        gavin: req.userData.userId
+        gavin: req.userData.userId,
+        repost: null
     })
 
     /*
