@@ -119,6 +119,8 @@ const repostAQuestion = async (req, res, next) => {
 
     }
 
+    let post
+
     try {
 
     } catch (err) {
