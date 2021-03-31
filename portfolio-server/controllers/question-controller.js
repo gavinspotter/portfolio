@@ -122,9 +122,10 @@ const repostAQuestion = async (req, res, next) => {
     let post
 
     try {
-
+        post = await Question.findById(question)
     } catch (err) {
-
+        const error = new HttpError("couldnt find question", 500)
+        return next(error)
     }
 
 
